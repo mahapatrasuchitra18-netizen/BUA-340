@@ -40,7 +40,7 @@ rural = df[df['zip_code'] == 'Rural']
 X = sm.add_constant(urban['got_email'])
 y = urban['conversion']
 urban_model = sm.OLS(y, X).fit()
-print('Urban Results')
+print('Urban')
 print(urban_model.params['got_email'])
 print(urban_model.bse['got_email'])
 
@@ -48,6 +48,7 @@ print(urban_model.bse['got_email'])
 X = sm.add_constant(suburban['got_email'])
 y = suburban['conversion']
 suburban_model = sm.OLS(y, X).fit()
+print('Suburban')
 print(suburban_model.params['got_email'])
 print(suburban_model.bse['got_email'])
 
@@ -55,6 +56,7 @@ print(suburban_model.bse['got_email'])
 X = sm.add_constant(rural['got_email'])
 y = rural['conversion']
 rural_model = sm.OLS(y, X).fit()
+print('Rural')
 print(rural_model.params['got_email'])
 print(rural_model.bse['got_email'])
 
